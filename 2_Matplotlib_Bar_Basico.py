@@ -11,6 +11,11 @@ width = 0.10
 
 anos = np.arange(2014,2021)
 
+
+plt.style.use('fivethirtyeight')
+plt.style.use('dark_background')
+
+
 plt.bar(anos + width,p,width = width,color ='blue',label='Python')
 plt.bar(anos,j,width = width,color ='orange',label='Java')
 plt.bar(anos - width,c,width = width,color ='green',label='C')
