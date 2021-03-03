@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+#tryng to use github
 a = [2018,2019,2020,2021,2022,2023]
 b = [2,5,6,4,7,8]
 c = [5,4,6,3,2,8]
