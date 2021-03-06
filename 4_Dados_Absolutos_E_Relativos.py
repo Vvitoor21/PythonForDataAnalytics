@@ -2,7 +2,6 @@ import pandas as pd
 
 import numpy as np
 
-"""
 dados = { 'emprego':['Administrador de banco de dados', 'Arquiteto', 'Programador'],
          'sao_paulo':[97350, 82080, 112840],
          'rio': [77140, 71540, 62310] }
@@ -23,7 +22,7 @@ list = ['Total',dataset['sao_paulo'].sum(), dataset['rio'].sum(), dataset['Porce
 print(list)
 dataset.loc[len(dataset)] = list
 print(dataset)
-"""
+
 boletim = {'notas1': [8, 5, 9, 8],
                         'notas2': [8, 4, 6, 4],
                         'materia': ['bio', 'mat', 'por', 'qui']
