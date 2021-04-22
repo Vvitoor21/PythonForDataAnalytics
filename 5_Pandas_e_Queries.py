@@ -12,3 +12,13 @@ print(data.query('Peso > 60'))
 
 print(data.query('Peso > 60 and Local == "São Paulo"'))
 
+import numpy as np
+arr = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(arr)
+print('Somando as colunas verticais')
+print(np.sum(arr,axis=0))
+print('Somando as linhas horizontais')
+print(np.sum(arr,axis=1))
+
+print(arr.mean()) # Calcula a média (Especificar Coluna)
+
