@@ -35,6 +35,21 @@ from sklearn.metrics import accuracy_score
 taxa_de_acerto = accuracy_score(certo, previsao)
 print("Taxa de acerto %.2f "% (taxa_de_acerto * 100))
 
+#2º Exemplo de calculo da acuracia----------------------------------------------------------------------------
+from sklearn.svm import LinearSVC
+
+modelo = LinearSVC()
+modelo.fit(treino_x, treino_y.values.ravel())
+
+from sklearn.metrics import accuracy_score
+
+modelo = LinearSVC()
+modelo.fit(treino_x, treino_y.values.ravel())
+previsoes = modelo.predict(teste_x)
+
+acuracia = accuracy_score(teste_y, previsoes) * 100
+print("A acurácia foi %.2f%%" % acuracia)
+
 
 
 
