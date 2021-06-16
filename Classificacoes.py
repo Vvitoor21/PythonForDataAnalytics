@@ -39,7 +39,7 @@ print("Taxa de acerto %.2f "% (taxa_de_acerto * 100))
 from sklearn.svm import LinearSVC
 
 modelo = LinearSVC()
-modelo.fit(treino_x, treino_y.values.ravel())
+modelo.fit(treino_x, treino_y.values.ravel()) #model.fit() -> sempre os dois testes como parametro, 75%.
 
 from sklearn.metrics import accuracy_score
 
@@ -47,7 +47,7 @@ modelo = LinearSVC()
 modelo.fit(treino_x, treino_y.values.ravel())
 previsoes = modelo.predict(teste_x)
 
-acuracia = accuracy_score(teste_y, previsoes) * 100
+acuracia = accuracy_score(teste_y, previsoes) * 100 #uma previsao para a acuracia comparada com um teste.
 print("A acurácia foi %.2f%%" % acuracia)
 
 
