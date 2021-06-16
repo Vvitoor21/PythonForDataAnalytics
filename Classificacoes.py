@@ -39,15 +39,15 @@ print("Taxa de acerto %.2f "% (taxa_de_acerto * 100))
 from sklearn.svm import LinearSVC
 
 modelo = LinearSVC()
-modelo.fit(treino_x, treino_y.values.ravel()) #model.fit() -> sempre os dois testes como parametro, 75%.
+modelo.fit(treino_x, treino_y.values.ravel()) #model.fit() -> sempre os dois testes como parametro, 75%. #compara features com o resultado final
 
 from sklearn.metrics import accuracy_score
 
 modelo = LinearSVC()
 modelo.fit(treino_x, treino_y.values.ravel())
-previsoes = modelo.predict(teste_x)
+previsoes = modelo.predict(teste_x) #agora é possivel saber de acordo com a features se compraram produtos no site
 
-acuracia = accuracy_score(teste_y, previsoes) * 100 #uma previsao para a acuracia comparada com um teste.
+acuracia = accuracy_score(teste_y, previsoes) * 100 #compara as comprar com as previsoes
 print("A acurácia foi %.2f%%" % acuracia)
 
 
