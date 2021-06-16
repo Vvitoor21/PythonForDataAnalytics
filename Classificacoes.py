@@ -50,6 +50,23 @@ previsoes = modelo.predict(teste_x) #agora é possivel saber de acordo com a fea
 acuracia = accuracy_score(teste_y, previsoes) * 100 #compara as comprar com as previsoes
 print("A acurácia foi %.2f%%" % acuracia)
 
+#-------------------------------------------------------------------------------------------------------------
+from sklearn.model_selection import train_test_split
+from sklearn.svm import LinearSVC
+
+from sklearn.metrics import accuracy_score
+
+seed = 20
+
+treino_x, teste_x, treino_y, teste_y = train_test_split(x, y, random_state = seed, test_size = 0.25, stratify = y)
+
+modelo = LinearSVC()
+modelo.fit(treino_x, treino_y.values.ravel())
+previsoes = modelo.predict(teste_x) # agora é possivel saber de acordo com a features se comprar produtos no site
+
+acuracia = accuracy_score(teste_y, previsoes) * 100
+print("A acurácia foi %.2f%%" % acuracia)
+
 
 
 
